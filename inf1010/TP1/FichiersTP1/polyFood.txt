@@ -1,0 +1,22 @@
+-MATIN
+Soupe 100 30 
+Oeuf 12 4.5
+Pain 5 2
+Crepes 6 2
+Pancakes 7 2
+-MIDI
+Poulet 20 6
+Frites 5 1
+Burrito 8 2
+Quesadillas 9 4
+-SOIR
+Pates 30 9
+Poisson 60 20
+Poulet 20 6
+Muffin 5 2
+Pizza 7 2
+-TABLES
+1 6
+2 4
+3 6
+4 2
