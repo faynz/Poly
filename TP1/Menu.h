@@ -16,7 +16,8 @@ class Menu {
 public: 
 	// constructeurs
 	Menu(); 
-	Menu(string fichier, TypeMenu type); 
+	Menu(const string& fichier, TypeMenu type);
+    ~Menu();
 
 
 	//getters
@@ -29,7 +30,7 @@ public:
 	Plat* trouverPlat(string& nom); 
 	void ajouterPlat(Plat & plat); 
 	void ajouterPlat(string& nom, double montant, double cout); 
-	bool lireMenu(string& fichier); 
+	bool lireMenu(const string& fichier);
 	
 private : 
 	unsigned int capacite_;
