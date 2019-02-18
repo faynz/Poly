@@ -17,18 +17,19 @@ public:
 	// constructeurs
 	Plat(); 
 	Plat(string nom, double prix, double cout);
+        ~Plat();
 
 	//getters 
-	string getNom() const;
-	double getPrix() const;
-	double getCout() const;
+	string getNom() const; 
+	double getPrix() const; 
+	double getCout() const; 
 
 	//setters 
 	void setNom(string nom); 
 	void setPrix(double prix); 
 	
 	//affichage
-	void afficher() const;
+	void afficher() const; 
 
 private: 
 	string nom_; 

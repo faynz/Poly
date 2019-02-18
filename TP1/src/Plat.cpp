@@ -12,6 +12,7 @@ Plat::Plat(string nom, double prix, double cout){
         cout_ = cout;
     
 }
+Plat::~Plat(){}
 
 string Plat::getNom() const {
         return nom_;

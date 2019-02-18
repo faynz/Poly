@@ -1,0 +1,33 @@
+1. L'attribut type_ est une énumération de type typePlat. Il permet d'
+   identifier à quel type de plat nous avons à faire. Grâce à l'héritage, 
+   l'attribut est passé à ses deux classes dérivées soit : platBio et 
+   platCustom. Dans les classes dérivées, l'attribut est fixé à une valeur
+   spécifique à la classe. Cet attribut correspond aux valeurs qu'on retrouve
+   dans l'énumération de la classe plat soit :
+   - Régulier (Pour un plat de type Plat)
+   - Bio (Pour un plat de type PlatBio)
+   - Custom (Pour un plat de type PlatCustom)
+   
+   En ayant un attribut qui diffère on peut identifier les plats. Par exemple,
+   dans un vecteur de plats où l'on peut retrouve les trois types de plats. 
+
+2. Le static_cast dans la classe client permet de camoufler le type de
+   client à la compilation. Notre but est de pouvoir réutiliser les
+   méthodes de la classe Client sur un client de type ClientRegulier ou
+   ClientPrestige. Au lieu de redéfinir la méthode entièrement, on
+   réutilise l'implémentation de la méthode de la classe Client et on y 
+   ajoute les particularités désirées. Cela évite de devoir écrire du 
+   code redondant et augmente l'efficacité de notre code
+
+   La raison pour laquelle nous devons camoufler le type est que la méthode
+   implémentée dans la classe Client ne sait pas quoi faire avec les attributs
+   supplémentaires de sa classe dérivée. Autrement dit, elle ne sait pas
+   afficher un clientRégulier (ou Prestige) par exemple. Enfin, ce processus 
+   se nomme «downcasting».
+ 
+3. Un client prestige possède tous les avantages d'un client régulier et
+   possède des avantages supplémentaires. Il est intéressant de définir 
+   un client prestige comme une classe dérivée de client régulier pour 
+   éviter de devoir redéfinir les mêmes méthodes/attributs d'un client 
+   régulier dans la classe ClientPrestige (une deuxième fois pour rien).
+   
